@@ -1,6 +1,18 @@
 # IoTAnalysis
 
-IoTAnalysis Docker environemnt for analyzing binaries on different architectures
+IoTAnalysis Docker environment for analyzing binaries on different architectures
+
+## Install
+
+```
+docker pull tylerph3/iotanalysis
+```
+
+## Example Usage
+
+```
+docker run -it -v ~/share:/share tylerph3/iotanalysis
+```
 
 # STATIC ANANLYSIS
 ## COMPILER
@@ -59,6 +71,7 @@ qemu-arm -g 12345 ./a.out &
 gdb-multiarch ./a.out
 ```
 
+
 ```
 set arch mips
 ```
@@ -67,12 +80,14 @@ or
 set arch arm
 ```
 
+
 ```
 set endian little
 target remote localhost:12345
 ```
 
-<3 Thanks Zach Riggle, Gulshan Singh, and CTFHacker <3 
-http://reverseengineering.stackexchange.com/a/8917
-https://github.com/ctfhacker/EpicTreasure/blob/master/docker/Dockerfile
 
+*<3 Thanks Zach Riggle, Gulshan Singh, and CTFHacker <3*
+
+* [http://reverseengineering.stackexchange.com/a/8917]
+* [https://github.com/ctfhacker/EpicTreasure/blob/master/docker/Dockerfile]
